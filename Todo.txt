@@ -4,6 +4,10 @@
 
 "." => Spaceship is lost forever
 
+"ungültige Map" => Spaceship is lost forever
+
+"..........\n" => Spaceship is lost forever
+
 "..........\n..........\n..........\n..........\n..........\n.........." => Spaceship lost forever 
 
 "..........\n..........\n..........\n.......X..\n..........\n.........." => [7, 2] OK
