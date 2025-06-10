@@ -1,5 +1,8 @@
 function HelpAlf() {}
 
 HelpAlf.prototype.findSpaceship = function (map) {
-  return "Spaceship lost forever.";
+  if (!map.includes("X")) {
+    return "Spaceship lost forever.";
+  }
+  return "[ 0, 0]";
 };

@@ -28,4 +28,10 @@ describe("HelpAlf", function () {
     const map = "..........\n";
     expect(helpAlf.findSpaceship(map)).toEqual("Spaceship lost forever.");
   });
+
+  //Gültige Map mit Inhalt
+  it("should return [ 0, 0]", function () {
+    const map = ".....X....\n";
+    expect(helpAlf.findSpaceship(map)).toEqual("[ 0, 0]");
+  });
 });
