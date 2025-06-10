@@ -46,4 +46,10 @@ describe("HelpAlf", function () {
     const map = "..........\n..........\n..........\n.......X..\n..........\n..........";
     expect(helpAlf.findSpaceship(map)).toEqual([7, 2]);
   });
+
+  //Gültige Map ohne Inhalt
+  it("should return spaceship lost forever.", function () {
+    const map = "..........\n..........\n..........\n..........\n..........\n..........";
+    expect(helpAlf.findSpaceship(map)).toEqual("Spaceship lost forever.");
+  });
 });
