@@ -32,6 +32,12 @@ describe("HelpAlf", function () {
   //Gültige Map mit Inhalt
   it("should return [ 0, 0]", function () {
     const map = ".....X....\n";
-    expect(helpAlf.findSpaceship(map)).toEqual("[ 0, 0]");
+    expect(helpAlf.findSpaceship(map)).toEqual([0, 0]);
+  });
+
+  //Gültige Map mit mehr Zeilen + Inhalt
+  it("should return [4, 0] for spaceship at line 4 from bottom", function () {
+    const map = "......X...\n..........\n..........\n..........\n..........";
+    expect(helpAlf.findSpaceship(map)).toEqual([4, 0]);
   });
 });
