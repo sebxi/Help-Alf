@@ -30,14 +30,20 @@ describe("HelpAlf", function () {
   });
 
   //Gültige Map mit Inhalt
-  it("should return [ 0, 0]", function () {
-    const map = ".....X....\n";
+  it("should return [0, 0]", function () {
+    const map = "X.........\n";
     expect(helpAlf.findSpaceship(map)).toEqual([0, 0]);
   });
 
   //Gültige Map mit mehr Zeilen + Inhalt
-  it("should return [4, 0] for spaceship at line 4 from bottom", function () {
-    const map = "......X...\n..........\n..........\n..........\n..........";
-    expect(helpAlf.findSpaceship(map)).toEqual([4, 0]);
+  it("should return [0, 4] for spaceship at line 4 from bottom", function () {
+    const map = "X.........\n..........\n..........\n..........\n..........";
+    expect(helpAlf.findSpaceship(map)).toEqual([0, 4]);
+  });
+
+  //Gültige Map + Inhalte Ausgabe mti Zeilel und Spalte
+  it("should return [7, 2] for spaceship at line 3 from bottom", function () {
+    const map = "..........\n..........\n..........\n.......X..\n..........\n..........";
+    expect(helpAlf.findSpaceship(map)).toEqual([7, 2]);
   });
 });

@@ -5,8 +5,9 @@ HelpAlf.prototype.findSpaceship = function (map) {
   const height = rows.length;
 
   for (let y = 0; y < height; y++) {
-    if (rows[y].includes("X")) {
-      return [height - 1 - y, 0];
+    const x = rows[y].indexOf("X");
+    if (x !== -1) {
+      return [x, height - 1 - y];
     }
   }
 
