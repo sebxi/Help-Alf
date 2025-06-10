@@ -58,4 +58,10 @@ describe("HelpAlf", function () {
     const map = "..........\n..X.......\n.........";
     expect(helpAlf.findSpaceship(map)).toEqual([2, 1]);
   });
+
+  //Ungültige Map
+  it("should return [2, 1] for spaceship at line 2 from bottom", function () {
+    const map = "falsch ..........\n..X.......\n.........";
+    expect(helpAlf.findSpaceship(map)).toEqual("Spaceship lost forever.");
+  });
 });

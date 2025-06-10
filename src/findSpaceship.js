@@ -1,6 +1,10 @@
 function HelpAlf() {}
 
 HelpAlf.prototype.findSpaceship = function (map) {
+  if (/[^.X\n]/.test(map)) {
+    return "Spaceship lost forever.";
+  }
+  
   const rows = map.trim().split("\n");
   const height = rows.length;
 
